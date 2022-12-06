@@ -43,7 +43,8 @@ def calories_counter2(input_data):
     if calories_temp > top3_elves[0]:
                 top3_elves[0] = calories_temp
 
-    print(top3_elves, top3_elves[0] + top3_elves[1] + top3_elves[2])
+    print(top3_elves, sum(top3_elves))
+
 
 calories_counter2(open_data("day1_input_example.txt"))
 # 45000 is correct
