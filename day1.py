@@ -32,8 +32,7 @@ def calories_counter2(input_data):
     calories_temp = 0
 
     for calories in input_data:        
-        if calories > 0:
-            calories_temp += calories
+        calories_temp += calories
 
         if calories == 0:
             if calories_temp > top3_elves[0]:
