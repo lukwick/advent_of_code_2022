@@ -32,12 +32,12 @@ def calories_counter1(data_list):
     if calories_temp > calories_leader:
         calories_leader = calories_temp
 
-    # Print result
-    print(calories_leader)
+    # Return result
+    return calories_leader
 
-calories_counter1(open_data("day1_input_example.txt", int))
+print(calories_counter1(open_data("day1_input_example.txt", int)))
 # 24000 is correct
-calories_counter1(open_data("day1_input.txt", int))
+print(calories_counter1(open_data("day1_input.txt", int)))
 # 70296 is correct
 
 
@@ -74,11 +74,11 @@ def calories_counter2(data_list):
     if calories_temp > top3_elves[0]:
         top3_elves[0] = calories_temp
 
-    # Print result
-    print(top3_elves, sum(top3_elves))
+    # Return result
+    top3_elves, sum(top3_elves)
 
 
-calories_counter2(open_data("day1_input_example.txt", int))
+print(calories_counter2(open_data("day1_input_example.txt", int)))
 # 45000 is correct
-calories_counter2(open_data("day1_input.txt", int))
+print(calories_counter2(open_data("day1_input.txt", int)))
 # 205381 is correct
