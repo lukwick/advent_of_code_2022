@@ -1,11 +1,11 @@
 
 
-from common_func import open_data
+from functions import open_data
 
 
 # Task 1
 def calories_counter1(input_data):
-    
+
     calories_temp = 0
     calories_leader = 0
 
