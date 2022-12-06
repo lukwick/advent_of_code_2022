@@ -4,12 +4,12 @@ from functions import open_data
 
 
 # Task 1
-def calories_counter1(input_data):
+def calories_counter1(data_list):
 
     calories_temp = 0
     calories_leader = 0
 
-    for calories in input_data:    
+    for calories in data_list:    
         calories_temp += calories
         if calories == 0:
             if calories_temp > calories_leader:
@@ -26,12 +26,12 @@ calories_counter1(open_data("day1_input.txt"))
 
 
 # Task 2
-def calories_counter2(input_data):
+def calories_counter2(data_list):
     
     top3_elves = [0, 0, 0]
     calories_temp = 0
 
-    for calories in input_data:        
+    for calories in data_list:        
         calories_temp += calories
 
         if calories == 0:
