@@ -3,8 +3,8 @@
 
 import csv
 
-def open_data(filename):
-    """Opens data input file. Returns input data as a list with integers."""
+def open_data(filename, type):
+    """Opens data input file. Returns input data as a list with the type of data you prefer. Places zeros in empty spaces."""
     
     # Open file as csv file
     with open(filename,"r") as file:
@@ -15,12 +15,12 @@ def open_data(filename):
         for line in csvfile:
             input_data.append(line)
 
-        # Adjust list into list with integers
+        # Adjust list into list with type = integers/floats/strings
         adjusted_input_data = list()
         for input in input_data:
             try:
-                adjusted_input_data.append(int(input[0]))
+                adjusted_input_data.append(type(input[0]))
             except IndexError:
-                adjusted_input_data.append(int(0))
+                adjusted_input_data.append(type(0))
                 
     return adjusted_input_data
