@@ -27,6 +27,10 @@ def calories_counter1(data_list):
             
             # Reset calories temp variable
             calories_temp = 0
+    
+    # After loop, check if the last calories group is relevant.
+    if calories_temp > calories_leader:
+        calories_leader = calories_temp
 
     # Print result
     print(calories_leader)
@@ -68,7 +72,7 @@ def calories_counter2(data_list):
 
     # After loop, check if the last calories group is relevant.
     if calories_temp > top3_elves[0]:
-                top3_elves[0] = calories_temp
+        top3_elves[0] = calories_temp
 
     # Print result
     print(top3_elves, sum(top3_elves))
