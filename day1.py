@@ -48,8 +48,8 @@ def calories_counter1(data_list):
     # Return result
     return calories_leader
 
-export_data("day1", "w", "1.0", calories_counter1(open_data("day1_input_example.txt")))
-export_data("day1", "a", "1.1", calories_counter1(open_data("day1_input.txt")))
+export_data("day1", "1.0", calories_counter1(open_data("day1_input_example.txt")))
+export_data("day1", "1.1", calories_counter1(open_data("day1_input.txt")))
 
 
 # Part Two
@@ -88,5 +88,5 @@ def calories_counter2(data_list):
     return top3_elves, sum(top3_elves)
 
 
-export_data("day1", "a", "2.0", calories_counter2(open_data("day1_input_example.txt")))
-export_data("day1", "a", "2.1", calories_counter2(open_data("day1_input.txt")))
+export_data("day1", "2.0", calories_counter2(open_data("day1_input_example.txt")))
+export_data("day1", "2.1", calories_counter2(open_data("day1_input.txt")))
