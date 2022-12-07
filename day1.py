@@ -85,7 +85,7 @@ def calories_counter2(data_list):
         top3_elves[0] = calories_temp
 
     # Return result
-    top3_elves, sum(top3_elves)
+    return top3_elves, sum(top3_elves)
 
 
 export_data("day1", "a", "2.0", calories_counter2(open_data("day1_input_example.txt")))
