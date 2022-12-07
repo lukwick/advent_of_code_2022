@@ -26,10 +26,10 @@ def open_data(filename, type):
     return adjusted_input_data
 
 
-def export_data(filename, mode, task, result):
+def export_data(day, mode, task, result):
     """Creates data export file to save the results."""
 
-    with open(filename, mode) as file:
+    with open(day + "_results.txt", mode) as file:
 
         # Write header
         file.write(task)
