@@ -48,8 +48,8 @@ def calories_counter1(data_list):
     # Return result
     return calories_leader
 
-export_data("day1", "1.0", calories_counter1(open_data("day1_input_example.txt")))
-export_data("day1", "1.1", calories_counter1(open_data("day1_input.txt")))
+export_data("day1", "1.0:", calories_counter1(open_data("day1_input_example.txt")))
+export_data("day1", "1.1:", calories_counter1(open_data("day1_input.txt")))
 
 
 # Part Two
