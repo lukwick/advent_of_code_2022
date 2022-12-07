@@ -24,3 +24,18 @@ def open_data(filename, type):
                 adjusted_input_data.append(type(0))
                 
     return adjusted_input_data
+
+
+def export_data(filename, mode, task, result):
+    """Creates data export file to save the results."""
+
+    with open(filename, mode) as file:
+
+        # Write header
+        file.write(task)
+        file.write("\n")
+
+        # Write result
+        file.write(str(result))
+        file.write("\n")
+        file.write("\n")
