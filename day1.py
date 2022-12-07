@@ -1,22 +1,18 @@
 
 import csv
+from functions import export_data
 
 
 # Import Data
 def open_data(filename):
-  
-    # Open file as csv file
     with open(filename,"r") as file:
         csvfile = csv.reader(file)
-
-        # Create input list
         input_data = list()
         for line in csvfile:
             try: 
                 input_data.append(int(line[0]))
             except IndexError:
-                input_data.append(int(0))
-                
+                input_data.append(int(0))        
     return input_data
 
 
@@ -52,11 +48,8 @@ def calories_counter1(data_list):
     # Return result
     return calories_leader
 
-print(calories_counter1(open_data("day1_input_example.txt")))
-# 24000 is correct
-print(calories_counter1(open_data("day1_input.txt")))
-# 70296 is correct
-
+export_data("day1", "w", "1.0", calories_counter1(open_data("day1_input_example.txt")))
+export_data("day1", "a", "1.1", calories_counter1(open_data("day1_input.txt")))
 
 
 # Part Two
@@ -95,7 +88,5 @@ def calories_counter2(data_list):
     top3_elves, sum(top3_elves)
 
 
-print(calories_counter2(open_data("day1_input_example.txt")))
-# 45000 is correct
-print(calories_counter2(open_data("day1_input.txt")))
-# 205381 is correct
+export_data("day1", "a", "2.0", calories_counter2(open_data("day1_input_example.txt")))
+export_data("day1", "a", "2.1", calories_counter2(open_data("day1_input.txt")))
