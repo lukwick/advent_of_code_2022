@@ -34,12 +34,8 @@ def score_prediction(games):
     # Loop through all games
     for game in games:
 
-        # Loop through all possible alternatives
-        for score in scores:
-
-            # If game and possible alternative is matching, increase score according to dict value
-            if game == score:
-                total_score += scores[score]
+        # Add score according to dict
+        total_score += scores[game]
 
     return total_score
 
@@ -71,11 +67,7 @@ def score_prediction2(games):
     total_score = 0
 
     for game in games:
-
-        for score in scores:
-
-            if game == score:
-                total_score += scores[score]
+        total_score += scores[game]
 
     return total_score
 
