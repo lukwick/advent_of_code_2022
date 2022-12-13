@@ -4,6 +4,8 @@ from functions import export_data
 
 
 # Import Data
+# ========================================================================
+
 def open_data(filename):
     with open(filename,"r") as file:
         csvfile = csv.reader(file)
@@ -16,7 +18,11 @@ def open_data(filename):
     return input_data
 
 
+
+
 # Part One
+# ========================================================================
+
 def calories_counter(data_list):
 
     # Keep track of the calories and calories bags
@@ -44,7 +50,11 @@ export_data("day1", "1.0:", calories_counter(open_data("day1_input_example.txt")
 export_data("day1", "1.1:", calories_counter(open_data("day1_input.txt")))
 
 
+
+
 # Part Two
+# ========================================================================
+
 def calories_counter2(data_list):
 
     # Keep track of the calories and calories bags

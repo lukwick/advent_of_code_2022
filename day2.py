@@ -4,6 +4,8 @@ from functions import export_data
 
 
 # Import Data
+# ========================================================================
+
 def open_data(filename): 
     with open(filename,"r") as file:
         csvfile = csv.reader(file)
@@ -13,7 +15,11 @@ def open_data(filename):
     return input_data
 
 
+
+
 # Part One
+# ========================================================================
+
 def score_prediction(games):
 
     # Scores possibilities
@@ -47,6 +53,8 @@ export_data("day2", "1.1:", score_prediction(open_data("day2_input.txt")))
 
 
 # Part Two
+# ========================================================================
+
 def score_prediction2(games):
 
     # Basically the exact same code
