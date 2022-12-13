@@ -23,7 +23,7 @@ def open_data(filename):
 # Part One
 # ========================================================================
 
-def calories_counter(data_list):
+def count_calories(data_list):
 
     # Keep track of the calories and calories bags
     bag = 0
@@ -46,8 +46,8 @@ def calories_counter(data_list):
     return bag_list[-1]
 
 
-export_data("day1", "1.0:", calories_counter(open_data("day1_input_example.txt")))
-export_data("day1", "1.1:", calories_counter(open_data("day1_input.txt")))
+export_data("day1", "1.0:", count_calories(open_data("day1_input_example.txt")))
+export_data("day1", "1.1:", count_calories(open_data("day1_input.txt")))
 
 
 
@@ -55,7 +55,7 @@ export_data("day1", "1.1:", calories_counter(open_data("day1_input.txt")))
 # Part Two
 # ========================================================================
 
-def calories_counter2(data_list):
+def count_calories2(data_list):
 
     # Keep track of the calories and calories bags
     bag = 0
@@ -78,5 +78,5 @@ def calories_counter2(data_list):
     return sum(bag_list[-3:])
 
 
-export_data("day1", "2.0", calories_counter2(open_data("day1_input_example.txt")))
-export_data("day1", "2.1", calories_counter2(open_data("day1_input.txt")))
+export_data("day1", "2.0", count_calories2(open_data("day1_input_example.txt")))
+export_data("day1", "2.1", count_calories2(open_data("day1_input.txt")))

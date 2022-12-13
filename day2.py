@@ -20,7 +20,7 @@ def open_data(filename):
 # Part One
 # ========================================================================
 
-def score_prediction(games):
+def predict_score(games):
 
     # Scores possibilities
     scores = {
@@ -46,8 +46,8 @@ def score_prediction(games):
     return total_score
 
 
-export_data("day2", "1.0:", score_prediction(open_data("day2_input_example.txt")))
-export_data("day2", "1.1:", score_prediction(open_data("day2_input.txt")))
+export_data("day2", "1.0:", predict_score(open_data("day2_input_example.txt")))
+export_data("day2", "1.1:", predict_score(open_data("day2_input.txt")))
 
 
 
@@ -55,7 +55,7 @@ export_data("day2", "1.1:", score_prediction(open_data("day2_input.txt")))
 # Part Two
 # ========================================================================
 
-def score_prediction2(games):
+def predict_score2(games):
 
     # Basically the exact same code
     # Adjusted only the scores dict
@@ -79,5 +79,5 @@ def score_prediction2(games):
 
     return total_score
 
-export_data("day2", "2.0:", score_prediction2(open_data("day2_input_example.txt")))
-export_data("day2", "2.1:", score_prediction2(open_data("day2_input.txt")))
+export_data("day2", "2.0:", predict_score2(open_data("day2_input_example.txt")))
+export_data("day2", "2.1:", predict_score2(open_data("day2_input.txt")))
