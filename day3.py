@@ -24,16 +24,17 @@ def split_rucksack(rucksacks):
 
     splitted_rucksacks = list()
 
-    # Loop through all rucksacks
     for rucksack in rucksacks:
 
         # Determine rucksack length and divide it by 2
         half_rucksack = int(len(rucksack) / 2)
 
-        # Create two lists in one list, which represents each compartment
-        splitted_rucksacks.append([rucksack[:half_rucksack], rucksack[half_rucksack:]])
-
-    # Return list with rucksacks and their compartments
+        # Create two lists which represent each compartment, inset them into splitted rucksacks list
+        splitted_rucksacks.append([
+            rucksack[:half_rucksack],
+            rucksack[half_rucksack:]
+            ])
+    
     return splitted_rucksacks
 
 
@@ -142,18 +143,17 @@ def group_rucksack(rucksacks):
     
     grouped_rucksacks = list()
 
-    # Loop through each third rucksack
+    # Loop through every third rucksack
     for rucksack in range(0, len(rucksacks), 3):
 
-        # Elf nr. 1, 2, 3 as sequence numbers
-        elf_1 = rucksacks[rucksack]
-        elf_2 = rucksacks[rucksack + 1]
-        elf_3 = rucksacks[rucksack + 2]
-
-        # Group three elfes together
-        grouped_rucksacks.append([elf_1, elf_2, elf_3])
+        # Group three rucksacks together
+        grouped_rucksacks.append([
+            rucksacks[rucksack],
+            rucksacks[rucksack + 1],
+            rucksacks[rucksack + 2]
+            ])
     
-    # Return list with group of three elves
+    # Return list with group of three rucksacks
     return grouped_rucksacks
 
 
@@ -161,16 +161,16 @@ def compare_compartment(grouped_rucksacks):
 
     badge_list = list()
 
-    # Loop through each group of three elves
+    # Loop through each group of three rucksacks
     for group in grouped_rucksacks:
 
-        # Loop through each item of elf nr. 1
+        # Loop through each item of rucksack nr. 1
         for item in group[0]:
 
-            # Check if item appears also in elf nr. 2's and nr. 3's rucksack
+            # Check if item appears also in rucksack nr. 2's and nr. 3's rucksack
             if item in group[1] and group[2]:
 
-                # If so, add the badge list
+                # If so, add to the badge list
                 badge_list.append(item)
 
                 # If the unique badge is found, stop the loop
