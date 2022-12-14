@@ -114,7 +114,7 @@ def group_rucksack(rucksacks):
     return grouped_rucksacks
 
 
-def compare_compartment(grouped_rucksacks):
+def compare_rucksack(grouped_rucksacks):
 
     badge_list = list()
 
@@ -125,7 +125,7 @@ def compare_compartment(grouped_rucksacks):
         for item in group[0]:
 
             # Check if item appears also in rucksack nr. 2's and nr. 3's rucksack
-            if item in group[1] and group[2]:
+            if item in group[1] and item in group[2]:
 
                 # If so, add to the badge list
                 badge_list.append(item)
@@ -139,12 +139,9 @@ def compare_compartment(grouped_rucksacks):
 def calculate_priority_2(input_data):
     
     # Merge all functions together
-    return calculate_score(compare_compartment(group_rucksack(input_data)))
+    return calculate_score(compare_rucksack(group_rucksack(input_data)))
 
 
 
 export_data("day3", "2.0:", calculate_priority_2(open_data("day3_input_example.txt")))
-# 70 = Correct answer
-
 export_data("day3", "2.1:", calculate_priority_2(open_data("day3_input.txt")))
-# 2719 = Wrong answer
