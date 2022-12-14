@@ -10,7 +10,7 @@ import string
 # === Import Data ===
 # ========================================================================
 
-def open_data(filename): 
+def import_data(filename): 
     with open(filename,"r") as file:
         csvfile = csv.reader(file)
         input_data = list()
@@ -88,8 +88,8 @@ def calculate_priority(input_data):
     return calculate_score((compare_compartment(split_rucksack(input_data))))
 
 
-export_data("day3", "1.0:", calculate_priority(open_data("day3_input_example.txt")))
-export_data("day3", "1.1:", calculate_priority(open_data("day3_input.txt")))
+export_data("day3", "1.0:", calculate_priority(import_data("day3_input_example.txt")))
+export_data("day3", "1.1:", calculate_priority(import_data("day3_input.txt")))
 
 
 
@@ -143,5 +143,5 @@ def calculate_priority_2(input_data):
 
 
 
-export_data("day3", "2.0:", calculate_priority_2(open_data("day3_input_example.txt")))
-export_data("day3", "2.1:", calculate_priority_2(open_data("day3_input.txt")))
+export_data("day3", "2.0:", calculate_priority_2(import_data("day3_input_example.txt")))
+export_data("day3", "2.1:", calculate_priority_2(import_data("day3_input.txt")))

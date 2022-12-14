@@ -6,7 +6,7 @@ from functions import export_data
 # === Import Data ===
 # ========================================================================
 
-def open_data(filename): 
+def import_data(filename): 
     with open(filename,"r") as file:
         csvfile = csv.reader(file)
         input_data = list()
@@ -46,8 +46,8 @@ def predict_score(games):
     return total_score
 
 
-export_data("day2", "1.0:", predict_score(open_data("day2_input_example.txt")))
-export_data("day2", "1.1:", predict_score(open_data("day2_input.txt")))
+export_data("day2", "1.0:", predict_score(import_data("day2_input_example.txt")))
+export_data("day2", "1.1:", predict_score(import_data("day2_input.txt")))
 
 
 
@@ -79,5 +79,5 @@ def predict_score2(games):
 
     return total_score
 
-export_data("day2", "2.0:", predict_score2(open_data("day2_input_example.txt")))
-export_data("day2", "2.1:", predict_score2(open_data("day2_input.txt")))
+export_data("day2", "2.0:", predict_score2(import_data("day2_input_example.txt")))
+export_data("day2", "2.1:", predict_score2(import_data("day2_input.txt")))
