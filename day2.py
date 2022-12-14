@@ -3,7 +3,7 @@ import csv
 from functions import export_data
 
 
-# Import Data
+# === Import Data ===
 # ========================================================================
 
 def open_data(filename): 
@@ -17,7 +17,7 @@ def open_data(filename):
 
 
 
-# Part One
+# === Part One ===
 # ========================================================================
 
 def predict_score(games):
@@ -52,7 +52,7 @@ export_data("day2", "1.1:", predict_score(open_data("day2_input.txt")))
 
 
 
-# Part Two
+# === Part Two ===
 # ========================================================================
 
 def predict_score2(games):

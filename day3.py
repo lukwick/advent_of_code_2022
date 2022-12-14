@@ -7,7 +7,7 @@ import string
 
 
 
-# Import Data
+# === Import Data ===
 # ========================================================================
 
 def open_data(filename): 
@@ -20,7 +20,7 @@ def open_data(filename):
 
 
 
-# Part One
+# === Part One ===
 # ========================================================================
 
 def split_rucksack(rucksacks):
@@ -93,7 +93,7 @@ export_data("day3", "1.1:", calculate_priority(open_data("day3_input.txt")))
 
 
 
-# Part Two
+# === Part Two ===
 # ========================================================================
 
 def group_rucksack(rucksacks):

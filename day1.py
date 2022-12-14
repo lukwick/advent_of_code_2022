@@ -3,7 +3,7 @@ import csv
 from functions import export_data
 
 
-# Import Data
+# === Import Data ===
 # ========================================================================
 
 def open_data(filename):
@@ -20,7 +20,7 @@ def open_data(filename):
 
 
 
-# Part One
+# === Part One ===
 # ========================================================================
 
 def count_calories(data_list):
@@ -52,7 +52,7 @@ export_data("day1", "1.1:", count_calories(open_data("day1_input.txt")))
 
 
 
-# Part Two
+# === Part Two ===
 # ========================================================================
 
 def count_calories2(data_list):
