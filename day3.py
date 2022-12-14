@@ -69,10 +69,10 @@ def calculate_score(item_list):
 
     # Create dict with all items and their scores
     items_dict = {}
-    index = 0
     for item in items:
-        index += 1
-        items_dict[item] = index
+
+        # Create letter entry, link to list position number + 1
+        items_dict[item] = items.find(item) + 1
     
     # Calculate score of given item list
     score = 0
