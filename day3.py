@@ -2,6 +2,9 @@
 import csv
 from functions import export_data
 
+# Needed for ASCII letters
+import string
+
 
 
 # Import Data
@@ -59,68 +62,22 @@ def compare_compartment(splitted_rucksacks):
     return leftover_item_list
 
 
-def calculate_score(leftover_item_list):
+def calculate_score(item_list):
+    
+    # Generate  all items from "a" to "z" and from "A" to "Z"
+    items = string.ascii_letters
+
+    # Create dict with all items and their scores
+    items_dict = {}
+    index = 0
+    for item in items:
+        index += 1
+        items_dict[item] = index
+    
+    # Calculate score of given item list
     score = 0
-
-    # Dict of all priority scores of each item (letter)
-    scores = {
-        "a": 1,
-        "b": 2,
-        "c": 3,
-        "d": 4,
-        "e": 5,
-        "f": 6,
-        "g": 7,
-        "h": 8,
-        "i": 9,
-        "j": 10,
-        "k": 11,
-        "l": 12,
-        "m": 13,
-        "n": 14,
-        "o": 15,
-        "p": 16,
-        "q": 17,
-        "r": 18,
-        "s": 19,
-        "t": 20,
-        "u": 21,
-        "v": 22,
-        "w": 23,
-        "x": 24,
-        "y": 25,
-        "z": 26,
-        "A": 27,
-        "B": 28,
-        "C": 29,
-        "D": 30,
-        "E": 31,
-        "F": 32,
-        "G": 33,
-        "H": 34,
-        "I": 35,
-        "J": 36,
-        "K": 37,
-        "L": 38,
-        "M": 39,
-        "N": 40,
-        "O": 41,
-        "P": 42,
-        "Q": 43,
-        "R": 44,
-        "S": 45,
-        "T": 46,
-        "U": 47,
-        "V": 48,
-        "W": 49,
-        "X": 50,
-        "Y": 51,
-        "Z": 52
-    }
-
-    # Add up score
-    for item in leftover_item_list:
-        score += scores[item]
+    for item in item_list:
+        score += items_dict[item]
 
     return score
 
