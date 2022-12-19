@@ -1,6 +1,8 @@
 
 import csv
-from functions import export_data
+import sys
+sys.path.append('../advent_of_code_2022')
+from utilities import export_data
 
 # Needed for ASCII letters
 import string
@@ -88,8 +90,8 @@ def calculate_priority(input_data):
     return calculate_score((compare_compartment(split_rucksack(input_data))))
 
 
-export_data("day3", "1.0:", calculate_priority(import_data("day3_input_example.txt")))
-export_data("day3", "1.1:", calculate_priority(import_data("day3_input.txt")))
+export_data("day3", "1.0:", calculate_priority(import_data("day3/input_example.txt")))
+export_data("day3", "1.1:", calculate_priority(import_data("day3/input.txt")))
 
 
 
@@ -143,5 +145,5 @@ def calculate_priority_2(input_data):
 
 
 
-export_data("day3", "2.0:", calculate_priority_2(import_data("day3_input_example.txt")))
-export_data("day3", "2.1:", calculate_priority_2(import_data("day3_input.txt")))
+export_data("day3", "2.0:", calculate_priority_2(import_data("day3/input_example.txt")))
+export_data("day3", "2.1:", calculate_priority_2(import_data("day3/input.txt")))

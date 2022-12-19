@@ -1,9 +1,11 @@
 # Advent of Code 2022
 
-## Website:
+## What is Advent of Code? 
 
-[Link](https://adventofcode.com/2022/)
+"[Advent of Code](https://adventofcode.com/2022/) is an Advent calendar of small programming puzzles for a variety of skill sets and skill levels that can be solved in any programming language you like. People use them as interview prep, company training, university coursework, practice problems, a speed contest, or to challenge each other." 
 
-## Purpose:
 
-Platform to share my code with my friends.
+
+## Folder structure
+
+Each day has its own folder (`/day?`). Within the folder you find a `TASK.md` which explains the challenge of the day. The `input_example.txt` contains the test input and the `input.txt` the actual puzzle input. The `day?.py` file contains my coding solution. The `results.txt` represents the puzzle answers. 

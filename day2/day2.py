@@ -1,6 +1,8 @@
 
 import csv
-from functions import export_data
+import sys
+sys.path.append('../advent_of_code_2022')
+from utilities import export_data
 
 
 # === Import Data ===
@@ -46,8 +48,8 @@ def predict_score(games):
     return total_score
 
 
-export_data("day2", "1.0:", predict_score(import_data("day2_input_example.txt")))
-export_data("day2", "1.1:", predict_score(import_data("day2_input.txt")))
+export_data("day2", "1.0:", predict_score(import_data("day2/example.txt")))
+export_data("day2", "1.1:", predict_score(import_data("day2/input.txt")))
 
 
 
@@ -79,5 +81,5 @@ def predict_score2(games):
 
     return total_score
 
-export_data("day2", "2.0:", predict_score2(import_data("day2_input_example.txt")))
-export_data("day2", "2.1:", predict_score2(import_data("day2_input.txt")))
+export_data("day2", "2.0:", predict_score2(import_data("day2/input_example.txt")))
+export_data("day2", "2.1:", predict_score2(import_data("day2/input.txt")))

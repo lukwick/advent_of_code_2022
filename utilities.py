@@ -4,7 +4,7 @@
 def export_data(day, task, result):
     """Creates data export file to save the results."""
 
-    with open(day + "_results.txt", "w" if task == "1.0:" else "a") as file:
+    with open(f"{day}/results.txt", "w" if task == "1.0:" else "a") as file:
 
         # Write header
         file.write(task)
