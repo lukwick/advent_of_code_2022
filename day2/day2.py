@@ -48,7 +48,7 @@ def predict_score(games):
     return total_score
 
 
-export_data("day2", "1.0:", predict_score(import_data("day2/example.txt")))
+export_data("day2", "1.0:", predict_score(import_data("day2/input_example.txt")))
 export_data("day2", "1.1:", predict_score(import_data("day2/input.txt")))
 
 
