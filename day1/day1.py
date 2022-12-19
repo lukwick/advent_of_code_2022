@@ -1,6 +1,8 @@
 
 import csv
-from functions import export_data
+import sys
+sys.path.append('../advent_of_code_2022')
+from utilities import export_data
 
 
 # === Import Data ===
@@ -46,8 +48,8 @@ def count_calories(data_list):
     return bag_list[-1]
 
 
-export_data("day1", "1.0:", count_calories(import_data("day1_input_example.txt")))
-export_data("day1", "1.1:", count_calories(import_data("day1_input.txt")))
+export_data("day1", "1.0:", count_calories(import_data("day1/input_example.txt")))
+export_data("day1", "1.1:", count_calories(import_data("day1/input.txt")))
 
 
 
@@ -78,5 +80,5 @@ def count_calories2(data_list):
     return sum(bag_list[-3:])
 
 
-export_data("day1", "2.0", count_calories2(import_data("day1_input_example.txt")))
-export_data("day1", "2.1", count_calories2(import_data("day1_input.txt")))
+export_data("day1", "2.0", count_calories2(import_data("day1/input_example.txt")))
+export_data("day1", "2.1", count_calories2(import_data("day1/input.txt")))
