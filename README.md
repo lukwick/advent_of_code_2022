@@ -8,4 +8,4 @@
 
 ## Folder structure
 
-Each day has its own folder (`/day?`). Within the folder you find a `TASK.md` which explains the challenge of the day. The `input_example.txt` contains the test input and the `input.txt` the actual puzzle input. The `day?.py` file contains my coding solution. The `results.txt` represents the puzzle answers. 
+Each day is represented by its own folder (`/day?`). Within each folder you find a `README.md` which explains the challenge of the day. The `input_example.txt` contains the test input and the `input.txt` the actual puzzle input. The `day?.py` file contains my coding solution. The `results.txt` is the puzzle answers. 
